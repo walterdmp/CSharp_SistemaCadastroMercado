@@ -268,6 +268,7 @@
             txt_Busca.Name = "txt_Busca";
             txt_Busca.Size = new Size(283, 29);
             txt_Busca.TabIndex = 1;
+            txt_Busca.TextChanged += txt_Busca_TextChanged;
             // 
             // lbl_Produto
             // 

@@ -44,16 +44,29 @@ namespace Projeto_Final
         {
             listaCBCategorias();
             limpaCampos();
+            lista_GridProdutos();
         }
 
         public void listaCBCategorias()
         {
             ConectaBanco con = new ConectaBanco();
-            DataTable tabelaDados= new DataTable();
+            DataTable tabelaDados = new DataTable();
             tabelaDados = con.listaCategorias();
             cb_Categoria.DataSource = tabelaDados;
             cb_Categoria.DisplayMember = "categoria";
             cb_Categoria.ValueMember = "idcategoria";
+        }
+
+        public void lista_GridProdutos()
+        {
+            ConectaBanco con = new ConectaBanco();
+            dg_Produtos.DataSource = con.listaProdutos();
+        }
+
+        private void txt_Busca_TextChanged(object sender, EventArgs e)
+        {
+            (dg_Produtos.DataSource as DataTable).DefaultView.RowFilter =
+    string.Format("nome like '{0}%'", txt_Busca.Text);
         }
     }
 }
