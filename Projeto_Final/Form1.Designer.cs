@@ -37,34 +37,34 @@
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox3 = new TextBox();
-            comboBox2 = new ComboBox();
-            button5 = new Button();
+            txt_AlteraNome = new TextBox();
+            txt_AlteraQuantidade = new TextBox();
+            txt_AlteraPreco = new TextBox();
+            cb_AlteraCategoria = new ComboBox();
+            btn_ConfirmaAlteracao = new Button();
             tabBuscar = new TabPage();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            dataGridView1 = new DataGridView();
+            lbl_Produto = new Label();
+            txt_Busca = new TextBox();
+            btn_RemoverProduto = new Button();
+            btn_Alterar = new Button();
+            dg_Produtos = new DataGridView();
             tabCadastrar = new TabPage();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            comboBox1 = new ComboBox();
-            button3 = new Button();
-            button4 = new Button();
+            lbl_Nome = new Label();
+            lbl_Categoria = new Label();
+            lbl_Qtd = new Label();
+            lbl_Preco = new Label();
+            txt_Nome = new TextBox();
+            txt_Qtd = new TextBox();
+            txt_Preco = new TextBox();
+            cb_Categoria = new ComboBox();
+            btn_ConfirmaCadastro = new Button();
+            btn_AdicionaCategoria = new Button();
             tabControl1 = new TabControl();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabAlterar.SuspendLayout();
             tabBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dg_Produtos).BeginInit();
             tabCadastrar.SuspendLayout();
             tabControl1.SuspendLayout();
             SuspendLayout();
@@ -106,11 +106,11 @@
             // tabAlterar
             // 
             tabAlterar.BackColor = Color.LightGray;
-            tabAlterar.Controls.Add(button5);
-            tabAlterar.Controls.Add(comboBox2);
-            tabAlterar.Controls.Add(textBox3);
-            tabAlterar.Controls.Add(textBox6);
-            tabAlterar.Controls.Add(textBox7);
+            tabAlterar.Controls.Add(btn_ConfirmaAlteracao);
+            tabAlterar.Controls.Add(cb_AlteraCategoria);
+            tabAlterar.Controls.Add(txt_AlteraPreco);
+            tabAlterar.Controls.Add(txt_AlteraQuantidade);
+            tabAlterar.Controls.Add(txt_AlteraNome);
             tabAlterar.Controls.Add(label7);
             tabAlterar.Controls.Add(label8);
             tabAlterar.Controls.Add(label9);
@@ -129,9 +129,9 @@
             label10.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label10.Location = new Point(11, 38);
             label10.Name = "label10";
-            label10.Size = new Size(78, 21);
+            label10.Size = new Size(63, 21);
             label10.TabIndex = 10;
-            label10.Text = "Produto: ";
+            label10.Text = "Nome: ";
             // 
             // label9
             // 
@@ -163,59 +163,59 @@
             label7.TabIndex = 13;
             label7.Text = "Preço:";
             // 
-            // textBox7
+            // txt_AlteraNome
             // 
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(127, 35);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(558, 29);
-            textBox7.TabIndex = 14;
+            txt_AlteraNome.BorderStyle = BorderStyle.FixedSingle;
+            txt_AlteraNome.Location = new Point(127, 35);
+            txt_AlteraNome.Name = "txt_AlteraNome";
+            txt_AlteraNome.Size = new Size(558, 29);
+            txt_AlteraNome.TabIndex = 14;
             // 
-            // textBox6
+            // txt_AlteraQuantidade
             // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(127, 124);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(558, 29);
-            textBox6.TabIndex = 15;
+            txt_AlteraQuantidade.BorderStyle = BorderStyle.FixedSingle;
+            txt_AlteraQuantidade.Location = new Point(127, 124);
+            txt_AlteraQuantidade.Name = "txt_AlteraQuantidade";
+            txt_AlteraQuantidade.Size = new Size(558, 29);
+            txt_AlteraQuantidade.TabIndex = 15;
             // 
-            // textBox3
+            // txt_AlteraPreco
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(127, 168);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(558, 29);
-            textBox3.TabIndex = 16;
+            txt_AlteraPreco.BorderStyle = BorderStyle.FixedSingle;
+            txt_AlteraPreco.Location = new Point(127, 168);
+            txt_AlteraPreco.Name = "txt_AlteraPreco";
+            txt_AlteraPreco.Size = new Size(558, 29);
+            txt_AlteraPreco.TabIndex = 16;
             // 
-            // comboBox2
+            // cb_AlteraCategoria
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(127, 77);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(558, 29);
-            comboBox2.TabIndex = 17;
+            cb_AlteraCategoria.FormattingEnabled = true;
+            cb_AlteraCategoria.Location = new Point(127, 77);
+            cb_AlteraCategoria.Name = "cb_AlteraCategoria";
+            cb_AlteraCategoria.Size = new Size(558, 29);
+            cb_AlteraCategoria.TabIndex = 17;
             // 
-            // button5
+            // btn_ConfirmaAlteracao
             // 
-            button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.ImageAlign = ContentAlignment.MiddleLeft;
-            button5.Location = new Point(296, 203);
-            button5.Name = "button5";
-            button5.Size = new Size(205, 44);
-            button5.TabIndex = 18;
-            button5.Text = "Confirmar Alteração";
-            button5.TextAlign = ContentAlignment.MiddleRight;
-            button5.UseVisualStyleBackColor = true;
+            btn_ConfirmaAlteracao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ConfirmaAlteracao.Image = (Image)resources.GetObject("btn_ConfirmaAlteracao.Image");
+            btn_ConfirmaAlteracao.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_ConfirmaAlteracao.Location = new Point(296, 203);
+            btn_ConfirmaAlteracao.Name = "btn_ConfirmaAlteracao";
+            btn_ConfirmaAlteracao.Size = new Size(205, 44);
+            btn_ConfirmaAlteracao.TabIndex = 18;
+            btn_ConfirmaAlteracao.Text = "Confirmar Alteração";
+            btn_ConfirmaAlteracao.TextAlign = ContentAlignment.MiddleRight;
+            btn_ConfirmaAlteracao.UseVisualStyleBackColor = true;
             // 
             // tabBuscar
             // 
             tabBuscar.BackColor = Color.LightGray;
-            tabBuscar.Controls.Add(dataGridView1);
-            tabBuscar.Controls.Add(button2);
-            tabBuscar.Controls.Add(button1);
-            tabBuscar.Controls.Add(textBox1);
-            tabBuscar.Controls.Add(label1);
+            tabBuscar.Controls.Add(dg_Produtos);
+            tabBuscar.Controls.Add(btn_Alterar);
+            tabBuscar.Controls.Add(btn_RemoverProduto);
+            tabBuscar.Controls.Add(txt_Busca);
+            tabBuscar.Controls.Add(lbl_Produto);
             tabBuscar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tabBuscar.Location = new Point(4, 34);
             tabBuscar.Name = "tabBuscar";
@@ -224,73 +224,73 @@
             tabBuscar.TabIndex = 1;
             tabBuscar.Text = "Buscar";
             // 
-            // label1
+            // lbl_Produto
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(39, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Produto:";
+            lbl_Produto.AutoSize = true;
+            lbl_Produto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Produto.Location = new Point(39, 26);
+            lbl_Produto.Name = "lbl_Produto";
+            lbl_Produto.Size = new Size(74, 21);
+            lbl_Produto.TabIndex = 0;
+            lbl_Produto.Text = "Produto:";
             // 
-            // textBox1
+            // txt_Busca
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(114, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(283, 29);
-            textBox1.TabIndex = 1;
+            txt_Busca.BorderStyle = BorderStyle.FixedSingle;
+            txt_Busca.Location = new Point(114, 23);
+            txt_Busca.Name = "txt_Busca";
+            txt_Busca.Size = new Size(283, 29);
+            txt_Busca.TabIndex = 1;
             // 
-            // button1
+            // btn_RemoverProduto
             // 
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(477, 15);
-            button1.Name = "button1";
-            button1.Size = new Size(114, 45);
-            button1.TabIndex = 2;
-            button1.Text = "Remover";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = true;
+            btn_RemoverProduto.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_RemoverProduto.Image = (Image)resources.GetObject("btn_RemoverProduto.Image");
+            btn_RemoverProduto.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_RemoverProduto.Location = new Point(477, 15);
+            btn_RemoverProduto.Name = "btn_RemoverProduto";
+            btn_RemoverProduto.Size = new Size(114, 45);
+            btn_RemoverProduto.TabIndex = 2;
+            btn_RemoverProduto.Text = "Remover";
+            btn_RemoverProduto.TextAlign = ContentAlignment.MiddleRight;
+            btn_RemoverProduto.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Alterar
             // 
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(621, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 45);
-            button2.TabIndex = 3;
-            button2.Text = "Alterar";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = true;
+            btn_Alterar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Alterar.Image = (Image)resources.GetObject("btn_Alterar.Image");
+            btn_Alterar.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_Alterar.Location = new Point(621, 15);
+            btn_Alterar.Name = "btn_Alterar";
+            btn_Alterar.Size = new Size(106, 45);
+            btn_Alterar.TabIndex = 3;
+            btn_Alterar.Text = "Alterar";
+            btn_Alterar.TextAlign = ContentAlignment.MiddleRight;
+            btn_Alterar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dg_Produtos
             // 
-            dataGridView1.BackgroundColor = SystemColors.Control;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(39, 66);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(715, 195);
-            dataGridView1.TabIndex = 4;
+            dg_Produtos.BackgroundColor = SystemColors.Control;
+            dg_Produtos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_Produtos.Location = new Point(39, 66);
+            dg_Produtos.Name = "dg_Produtos";
+            dg_Produtos.RowTemplate.Height = 25;
+            dg_Produtos.Size = new Size(715, 195);
+            dg_Produtos.TabIndex = 4;
             // 
             // tabCadastrar
             // 
             tabCadastrar.BackColor = Color.LightGray;
-            tabCadastrar.Controls.Add(button4);
-            tabCadastrar.Controls.Add(button3);
-            tabCadastrar.Controls.Add(comboBox1);
-            tabCadastrar.Controls.Add(textBox5);
-            tabCadastrar.Controls.Add(textBox4);
-            tabCadastrar.Controls.Add(textBox2);
-            tabCadastrar.Controls.Add(label6);
-            tabCadastrar.Controls.Add(label5);
-            tabCadastrar.Controls.Add(label4);
-            tabCadastrar.Controls.Add(label3);
+            tabCadastrar.Controls.Add(btn_AdicionaCategoria);
+            tabCadastrar.Controls.Add(btn_ConfirmaCadastro);
+            tabCadastrar.Controls.Add(cb_Categoria);
+            tabCadastrar.Controls.Add(txt_Preco);
+            tabCadastrar.Controls.Add(txt_Qtd);
+            tabCadastrar.Controls.Add(txt_Nome);
+            tabCadastrar.Controls.Add(lbl_Preco);
+            tabCadastrar.Controls.Add(lbl_Qtd);
+            tabCadastrar.Controls.Add(lbl_Categoria);
+            tabCadastrar.Controls.Add(lbl_Nome);
             tabCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tabCadastrar.ForeColor = SystemColors.ControlText;
             tabCadastrar.Location = new Point(4, 34);
@@ -301,103 +301,103 @@
             tabCadastrar.TabIndex = 0;
             tabCadastrar.Text = "Cadastrar";
             // 
-            // label3
+            // lbl_Nome
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(11, 39);
-            label3.Name = "label3";
-            label3.Size = new Size(78, 21);
-            label3.TabIndex = 0;
-            label3.Text = "Produto: ";
+            lbl_Nome.AutoSize = true;
+            lbl_Nome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Nome.Location = new Point(11, 39);
+            lbl_Nome.Name = "lbl_Nome";
+            lbl_Nome.Size = new Size(63, 21);
+            lbl_Nome.TabIndex = 0;
+            lbl_Nome.Text = "Nome: ";
             // 
-            // label4
+            // lbl_Categoria
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(11, 81);
-            label4.Name = "label4";
-            label4.Size = new Size(85, 21);
-            label4.TabIndex = 1;
-            label4.Text = "Categoria:";
+            lbl_Categoria.AutoSize = true;
+            lbl_Categoria.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Categoria.Location = new Point(11, 81);
+            lbl_Categoria.Name = "lbl_Categoria";
+            lbl_Categoria.Size = new Size(85, 21);
+            lbl_Categoria.TabIndex = 1;
+            lbl_Categoria.Text = "Categoria:";
             // 
-            // label5
+            // lbl_Qtd
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(11, 128);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 21);
-            label5.TabIndex = 2;
-            label5.Text = "Quantidade:";
+            lbl_Qtd.AutoSize = true;
+            lbl_Qtd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Qtd.Location = new Point(11, 128);
+            lbl_Qtd.Name = "lbl_Qtd";
+            lbl_Qtd.Size = new Size(99, 21);
+            lbl_Qtd.TabIndex = 2;
+            lbl_Qtd.Text = "Quantidade:";
             // 
-            // label6
+            // lbl_Preco
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(11, 171);
-            label6.Name = "label6";
-            label6.Size = new Size(56, 21);
-            label6.TabIndex = 3;
-            label6.Text = "Preço:";
+            lbl_Preco.AutoSize = true;
+            lbl_Preco.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Preco.Location = new Point(11, 171);
+            lbl_Preco.Name = "lbl_Preco";
+            lbl_Preco.Size = new Size(56, 21);
+            lbl_Preco.TabIndex = 3;
+            lbl_Preco.Text = "Preço:";
             // 
-            // textBox2
+            // txt_Nome
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(127, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(558, 29);
-            textBox2.TabIndex = 4;
+            txt_Nome.BorderStyle = BorderStyle.FixedSingle;
+            txt_Nome.Location = new Point(127, 36);
+            txt_Nome.Name = "txt_Nome";
+            txt_Nome.Size = new Size(558, 29);
+            txt_Nome.TabIndex = 4;
             // 
-            // textBox4
+            // txt_Qtd
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(127, 125);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(558, 29);
-            textBox4.TabIndex = 6;
+            txt_Qtd.BorderStyle = BorderStyle.FixedSingle;
+            txt_Qtd.Location = new Point(127, 125);
+            txt_Qtd.Name = "txt_Qtd";
+            txt_Qtd.Size = new Size(558, 29);
+            txt_Qtd.TabIndex = 6;
             // 
-            // textBox5
+            // txt_Preco
             // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(127, 169);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(558, 29);
-            textBox5.TabIndex = 7;
+            txt_Preco.BorderStyle = BorderStyle.FixedSingle;
+            txt_Preco.Location = new Point(127, 169);
+            txt_Preco.Name = "txt_Preco";
+            txt_Preco.Size = new Size(558, 29);
+            txt_Preco.TabIndex = 7;
             // 
-            // comboBox1
+            // cb_Categoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(127, 78);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(558, 29);
-            comboBox1.TabIndex = 8;
+            cb_Categoria.FormattingEnabled = true;
+            cb_Categoria.Location = new Point(127, 78);
+            cb_Categoria.Name = "cb_Categoria";
+            cb_Categoria.Size = new Size(558, 29);
+            cb_Categoria.TabIndex = 8;
             // 
-            // button3
+            // btn_ConfirmaCadastro
             // 
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(327, 204);
-            button3.Name = "button3";
-            button3.Size = new Size(127, 44);
-            button3.TabIndex = 9;
-            button3.Text = "Cadastrar";
-            button3.TextAlign = ContentAlignment.MiddleRight;
-            button3.UseVisualStyleBackColor = true;
+            btn_ConfirmaCadastro.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ConfirmaCadastro.Image = (Image)resources.GetObject("btn_ConfirmaCadastro.Image");
+            btn_ConfirmaCadastro.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_ConfirmaCadastro.Location = new Point(327, 204);
+            btn_ConfirmaCadastro.Name = "btn_ConfirmaCadastro";
+            btn_ConfirmaCadastro.Size = new Size(127, 44);
+            btn_ConfirmaCadastro.TabIndex = 9;
+            btn_ConfirmaCadastro.Text = "Cadastrar";
+            btn_ConfirmaCadastro.TextAlign = ContentAlignment.MiddleRight;
+            btn_ConfirmaCadastro.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_AdicionaCategoria
             // 
-            button4.BackColor = Color.LightGray;
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.FlatAppearance.BorderColor = Color.LightGray;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(695, 73);
-            button4.Name = "button4";
-            button4.Size = new Size(47, 37);
-            button4.TabIndex = 10;
-            button4.UseVisualStyleBackColor = false;
+            btn_AdicionaCategoria.BackColor = Color.LightGray;
+            btn_AdicionaCategoria.BackgroundImageLayout = ImageLayout.None;
+            btn_AdicionaCategoria.FlatAppearance.BorderColor = Color.LightGray;
+            btn_AdicionaCategoria.FlatStyle = FlatStyle.Flat;
+            btn_AdicionaCategoria.Image = (Image)resources.GetObject("btn_AdicionaCategoria.Image");
+            btn_AdicionaCategoria.Location = new Point(695, 73);
+            btn_AdicionaCategoria.Name = "btn_AdicionaCategoria";
+            btn_AdicionaCategoria.Size = new Size(47, 37);
+            btn_AdicionaCategoria.TabIndex = 10;
+            btn_AdicionaCategoria.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
@@ -429,7 +429,7 @@
             tabAlterar.PerformLayout();
             tabBuscar.ResumeLayout(false);
             tabBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dg_Produtos).EndInit();
             tabCadastrar.ResumeLayout(false);
             tabCadastrar.PerformLayout();
             tabControl1.ResumeLayout(false);
@@ -441,32 +441,32 @@
         private Label label2;
         private PictureBox pictureBox1;
         private TabPage tabAlterar;
-        private Button button5;
-        private ComboBox comboBox2;
-        private TextBox textBox3;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private Button btn_ConfirmaAlteracao;
+        private ComboBox cb_AlteraCategoria;
+        private TextBox txt_AlteraPreco;
+        private TextBox txt_AlteraQuantidade;
+        private TextBox txt_AlteraNome;
         private Label label7;
         private Label label8;
         private Label label9;
         private Label label10;
         private TabPage tabBuscar;
-        private DataGridView dataGridView1;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
-        private Label label1;
+        private DataGridView dg_Produtos;
+        private Button btn_Alterar;
+        private Button btn_RemoverProduto;
+        private TextBox txt_Busca;
+        private Label lbl_Produto;
         private TabPage tabCadastrar;
-        private Button button4;
-        private Button button3;
-        private ComboBox comboBox1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox2;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
+        private Button btn_AdicionaCategoria;
+        private Button btn_ConfirmaCadastro;
+        private ComboBox cb_Categoria;
+        private TextBox txt_Preco;
+        private TextBox txt_Qtd;
+        private TextBox txt_Nome;
+        private Label lbl_Preco;
+        private Label lbl_Qtd;
+        private Label lbl_Categoria;
+        private Label lbl_Nome;
         private TabControl tabControl1;
     }
 }
