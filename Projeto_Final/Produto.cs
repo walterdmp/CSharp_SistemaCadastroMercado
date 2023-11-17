@@ -8,9 +8,14 @@ namespace Projeto_Final
 {
     class Produto
     {
-        private string nome { get; set; }
-        private int quantidade { get; set; }
-        private double preco { get; set; }
-        private int categoria { get; set; }
+        string nome;
+        int quantidade;
+        double preco;
+        int categoria;
+
+        public string Nome { get => nome; set => nome = value; }
+        public int Quantidade { get => quantidade; set => quantidade = value; }
+        public double Preco { get => preco; set => preco = value; }
+        public int Categoria { get => categoria; set => categoria = value; }
     }
 }
