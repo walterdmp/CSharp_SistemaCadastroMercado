@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Final
 {
-    partial class Form1
+    partial class Sistema
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
             panel1 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
@@ -260,6 +260,7 @@
             btn_RemoverProduto.Text = "Remover";
             btn_RemoverProduto.TextAlign = ContentAlignment.MiddleRight;
             btn_RemoverProduto.UseVisualStyleBackColor = true;
+            btn_RemoverProduto.Click += btn_RemoverProduto_Click;
             // 
             // txt_Busca
             // 
@@ -416,15 +417,15 @@
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabIndex = 0;
             // 
-            // Form1
+            // Sistema
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Controls.Add(tabControl1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Sistema";
+            Text = "Sistema Mercado Nova Machado";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

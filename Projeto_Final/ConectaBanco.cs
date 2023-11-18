@@ -80,5 +80,26 @@ namespace Projeto_Final
             }
 
         }
+        public bool deletaProduto(int idRemoveProduto)
+        {
+            MySqlCommand cmd = new MySqlCommand("sp_removeProduto", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idprodut", idRemoveProduto);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }// fim deletaBanda 
     }
 }
