@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.RoyalBlue;
             panel1.Controls.Add(btn_fechar);
             panel1.Location = new Point(-1, -1);
             panel1.Name = "panel1";
@@ -51,7 +51,7 @@
             // 
             btn_fechar.BackgroundImageLayout = ImageLayout.None;
             btn_fechar.FlatStyle = FlatStyle.Flat;
-            btn_fechar.ForeColor = SystemColors.ActiveCaption;
+            btn_fechar.ForeColor = Color.RoyalBlue;
             btn_fechar.Image = (Image)resources.GetObject("btn_fechar.Image");
             btn_fechar.Location = new Point(535, 0);
             btn_fechar.Name = "btn_fechar";
@@ -106,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGray;
+            BackColor = Color.DarkGray;
             ClientSize = new Size(575, 246);
             Controls.Add(lbl_Categoria);
             Controls.Add(panel1);

@@ -72,7 +72,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.RoyalBlue;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox1);
@@ -85,7 +85,7 @@
             // 
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ActiveCaption;
+            button1.ForeColor = Color.RoyalBlue;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(754, 0);
             button1.Name = "button1";
@@ -97,30 +97,30 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ButtonHighlight;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(172, 42);
+            label2.BackColor = Color.RoyalBlue;
+            label2.Font = new Font("Impact", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.WindowText;
+            label2.Location = new Point(190, 47);
             label2.Name = "label2";
-            label2.Size = new Size(567, 67);
+            label2.Size = new Size(492, 60);
             label2.TabIndex = 1;
             label2.Text = "Mercado Nova Machado";
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = SystemColors.GrayText;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.BackColor = Color.RoyalBlue;
+            pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(93, 42);
+            pictureBox1.Location = new Point(102, 32);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(82, 67);
+            pictureBox1.Size = new Size(82, 75);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // tabAlterar
             // 
-            tabAlterar.BackColor = Color.LightGray;
+            tabAlterar.BackColor = Color.DarkGray;
             tabAlterar.Controls.Add(btn_ConfirmaAlteracao);
             tabAlterar.Controls.Add(cb_AlteraCategoria);
             tabAlterar.Controls.Add(txt_AlteraPreco);
@@ -226,7 +226,7 @@
             // 
             // tabBuscar
             // 
-            tabBuscar.BackColor = Color.LightGray;
+            tabBuscar.BackColor = Color.DarkGray;
             tabBuscar.Controls.Add(dg_Produtos);
             tabBuscar.Controls.Add(btn_Alterar);
             tabBuscar.Controls.Add(btn_RemoverProduto);
@@ -242,7 +242,7 @@
             // 
             // dg_Produtos
             // 
-            dg_Produtos.BackgroundColor = SystemColors.Control;
+            dg_Produtos.BackgroundColor = Color.LightGray;
             dg_Produtos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_Produtos.Location = new Point(39, 66);
             dg_Produtos.Name = "dg_Produtos";
@@ -299,7 +299,7 @@
             // 
             // tabCadastrar
             // 
-            tabCadastrar.BackColor = Color.LightGray;
+            tabCadastrar.BackColor = Color.DarkGray;
             tabCadastrar.Controls.Add(btn_AdicionaCategoria);
             tabCadastrar.Controls.Add(btn_ConfirmaCadastro);
             tabCadastrar.Controls.Add(cb_Categoria);
@@ -322,10 +322,11 @@
             // 
             // btn_AdicionaCategoria
             // 
-            btn_AdicionaCategoria.BackColor = Color.LightGray;
+            btn_AdicionaCategoria.BackColor = Color.DarkGray;
             btn_AdicionaCategoria.BackgroundImageLayout = ImageLayout.None;
-            btn_AdicionaCategoria.FlatAppearance.BorderColor = Color.LightGray;
+            btn_AdicionaCategoria.FlatAppearance.BorderColor = Color.DarkGray;
             btn_AdicionaCategoria.FlatStyle = FlatStyle.Flat;
+            btn_AdicionaCategoria.ForeColor = Color.DarkGray;
             btn_AdicionaCategoria.Image = (Image)resources.GetObject("btn_AdicionaCategoria.Image");
             btn_AdicionaCategoria.Location = new Point(695, 73);
             btn_AdicionaCategoria.Name = "btn_AdicionaCategoria";
@@ -339,7 +340,7 @@
             btn_ConfirmaCadastro.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btn_ConfirmaCadastro.Image = (Image)resources.GetObject("btn_ConfirmaCadastro.Image");
             btn_ConfirmaCadastro.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_ConfirmaCadastro.Location = new Point(327, 204);
+            btn_ConfirmaCadastro.Location = new Point(327, 213);
             btn_ConfirmaCadastro.Name = "btn_ConfirmaCadastro";
             btn_ConfirmaCadastro.Size = new Size(127, 44);
             btn_ConfirmaCadastro.TabIndex = 9;
