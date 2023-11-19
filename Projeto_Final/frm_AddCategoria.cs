@@ -12,16 +12,21 @@ namespace Projeto_Final
 {
     public partial class frm_AddCategoria : Form
     {
+        Sistema formSistema;
         public frm_AddCategoria()
         {
             InitializeComponent();
         }
+        public frm_AddCategoria(Sistema sistema)
+        {
+            InitializeComponent();
+            formSistema = sistema;
+        }
 
         private void btn_fechar_Click(object sender, EventArgs e)
         {
-            Form1 formSistema = new Form1();
-            this.Close();
-            formSistema.Show();
+            this.Close(); // Fecha o formulário atual (frm_AddCategoria)
+            formSistema.Show(); // Mostra o formulário Sistema novamente
         }
 
         private void btn_AddCategoria_Click(object sender, EventArgs e)
@@ -39,6 +44,11 @@ namespace Projeto_Final
                 txt_AddCategoria.Focus();
 
             }
+
+        }
+
+        private void frm_AddCategoria_Load(object sender, EventArgs e)
+        {
 
         }
     }

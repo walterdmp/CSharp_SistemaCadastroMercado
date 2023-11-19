@@ -2,11 +2,11 @@ using System.Data;
 
 namespace Projeto_Final
 {
-    public partial class Form1 : Form
+    public partial class Sistema : Form
     {
         int idAlterar;
 
-        public Form1()
+        public Sistema()
         {
             InitializeComponent();
         }
@@ -120,7 +120,7 @@ namespace Projeto_Final
 
         private void btn_AdicionaCategoria_Click(object sender, EventArgs e)
         {
-            frm_AddCategoria formCategoria = new frm_AddCategoria();
+            frm_AddCategoria formCategoria = new frm_AddCategoria(this); // Passando a referência do Sistema para frm_AddCategoria
             this.Hide();
             formCategoria.ShowDialog();
         }

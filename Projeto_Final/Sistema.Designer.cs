@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Final
 {
-    partial class Form1
+    partial class Sistema
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
             panel1 = new Panel();
             button1 = new Button();
             label2 = new Label();

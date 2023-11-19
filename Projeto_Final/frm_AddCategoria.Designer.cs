@@ -117,6 +117,7 @@
             Name = "frm_AddCategoria";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frm_AddCategoria";
+            Load += frm_AddCategoria_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

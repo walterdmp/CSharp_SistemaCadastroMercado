@@ -20,16 +20,17 @@ namespace Projeto_Final
 
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
-            if (txt_UserLogin.Text.Equals("adm") && txt_SenhaLogin.Text.Equals("123"))
+            ConectaBanco conecta = new ConectaBanco();
+            if(conecta.verifica(txt_UserLogin.Text, txt_SenhaLogin.Text) == true)
             {
-                Form1 sistema = new Form1();
+                Sistema sistema = new Sistema();
                 this.Hide();
                 sistema.ShowDialog();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Usuário ou senha incorreta.");
+                MessageBox.Show("Usuário ou senha incorreta." + conecta.mensagem);
             }
         }
 
