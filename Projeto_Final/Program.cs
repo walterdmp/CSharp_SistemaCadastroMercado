@@ -10,7 +10,7 @@ namespace Projeto_Final
         {
             
             ApplicationConfiguration.Initialize();
-            Application.Run(new Sistema());
+            Application.Run(new Form1());
         }
     }
 }

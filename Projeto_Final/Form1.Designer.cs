@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Final
 {
-    partial class Sistema
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            button1 = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
             tabAlterar = new TabPage();
@@ -72,12 +73,26 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(793, 148);
+            panel1.Size = new Size(804, 148);
             panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.BackgroundImageLayout = ImageLayout.None;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = SystemColors.ActiveCaption;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(754, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(47, 32);
+            button1.TabIndex = 5;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -85,7 +100,7 @@
             label2.BackColor = SystemColors.ButtonHighlight;
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(157, 36);
+            label2.Location = new Point(172, 42);
             label2.Name = "label2";
             label2.Size = new Size(567, 67);
             label2.TabIndex = 1;
@@ -96,7 +111,7 @@
             pictureBox1.BackColor = SystemColors.GrayText;
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(78, 36);
+            pictureBox1.Location = new Point(93, 42);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(82, 67);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -119,7 +134,7 @@
             tabAlterar.Location = new Point(4, 34);
             tabAlterar.Name = "tabAlterar";
             tabAlterar.Padding = new Padding(3);
-            tabAlterar.Size = new Size(792, 264);
+            tabAlterar.Size = new Size(803, 274);
             tabAlterar.TabIndex = 2;
             tabAlterar.Text = "Alterar";
             // 
@@ -221,7 +236,7 @@
             tabBuscar.Location = new Point(4, 34);
             tabBuscar.Name = "tabBuscar";
             tabBuscar.Padding = new Padding(3);
-            tabBuscar.Size = new Size(792, 264);
+            tabBuscar.Size = new Size(803, 274);
             tabBuscar.TabIndex = 1;
             tabBuscar.Text = "Buscar";
             // 
@@ -247,6 +262,7 @@
             btn_Alterar.Text = "Alterar";
             btn_Alterar.TextAlign = ContentAlignment.MiddleRight;
             btn_Alterar.UseVisualStyleBackColor = true;
+            btn_Alterar.Click += btn_Alterar_Click;
             // 
             // btn_RemoverProduto
             // 
@@ -300,7 +316,7 @@
             tabCadastrar.Name = "tabCadastrar";
             tabCadastrar.Padding = new Padding(3);
             tabCadastrar.RightToLeft = RightToLeft.No;
-            tabCadastrar.Size = new Size(792, 264);
+            tabCadastrar.Size = new Size(803, 274);
             tabCadastrar.TabIndex = 0;
             tabCadastrar.Text = "Cadastrar";
             // 
@@ -316,6 +332,7 @@
             btn_AdicionaCategoria.Size = new Size(47, 37);
             btn_AdicionaCategoria.TabIndex = 10;
             btn_AdicionaCategoria.UseVisualStyleBackColor = false;
+            btn_AdicionaCategoria.Click += btn_AdicionaCategoria_Click;
             // 
             // btn_ConfirmaCadastro
             // 
@@ -410,21 +427,23 @@
             tabControl1.Controls.Add(tabAlterar);
             tabControl1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             tabControl1.ItemSize = new Size(100, 30);
-            tabControl1.Location = new Point(-3, 147);
+            tabControl1.Location = new Point(-7, 147);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(800, 302);
+            tabControl1.Size = new Size(811, 312);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabIndex = 0;
             // 
-            // Sistema
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             Controls.Add(tabControl1);
-            Name = "Sistema";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema Mercado Nova Machado";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
@@ -473,5 +492,6 @@
         private Label lbl_Categoria;
         private Label lbl_Nome;
         private TabControl tabControl1;
+        private Button button1;
     }
 }

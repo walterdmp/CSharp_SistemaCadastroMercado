@@ -2,16 +2,31 @@ using System.Data;
 
 namespace Projeto_Final
 {
-    public partial class Sistema : Form
+    public partial class Form1 : Form
     {
-        public Sistema()
+        int idAlterar;
+
+        public Form1()
         {
             InitializeComponent();
         }
 
         private void btn_ConfirmaAlteracao_Click(object sender, EventArgs e)
         {
+            ConectaBanco con = new ConectaBanco();
+            Produto novoProduto = new Produto();
+            novoProduto.Nome = txt_AlteraNome.Text;
+            novoProduto.Quantidade = Convert.ToInt32(txt_AlteraQuantidade.Text);
+            novoProduto.Preco = double.Parse(txt_AlteraPreco.Text);
+            novoProduto.Categoria = Convert.ToInt32(cb_AlteraCategoria.SelectedValue.ToString());
+            bool retorno = con.alteraProduto(novoProduto, idAlterar);
+            if (retorno == false)
+                MessageBox.Show(con.mensagem);
+            else
+                MessageBox.Show("Alteração realizada com sucesso!");
 
+            limpaCampos();
+            lista_GridProdutos();
         }
 
         private void limpaCampos()
@@ -21,6 +36,11 @@ namespace Projeto_Final
             txt_Preco.Clear();
             cb_Categoria.Text = "";
             txt_Nome.Focus();
+
+            txt_AlteraNome.Clear();
+            txt_AlteraQuantidade.Clear();
+            txt_AlteraPreco.Clear();
+            cb_AlteraCategoria.Text = "";
         }
         private void btn_ConfirmaCadastro_Click(object sender, EventArgs e)
         {
@@ -56,6 +76,10 @@ namespace Projeto_Final
             cb_Categoria.DataSource = tabelaDados;
             cb_Categoria.DisplayMember = "categoria";
             cb_Categoria.ValueMember = "idcategoria";
+
+            cb_AlteraCategoria.DataSource = tabelaDados;
+            cb_AlteraCategoria.DisplayMember = "categoria";
+            cb_AlteraCategoria.ValueMember = "idcategoria";
         }
 
         public void lista_GridProdutos()
@@ -92,6 +116,34 @@ namespace Projeto_Final
             }// fim if Ok Cancela
             else
                 MessageBox.Show("Exclusão cancelada");
+        }
+
+        private void btn_AdicionaCategoria_Click(object sender, EventArgs e)
+        {
+            frm_AddCategoria formCategoria = new frm_AddCategoria();
+            this.Hide();
+            formCategoria.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Alterar_Click(object sender, EventArgs e)
+        {
+            int linha = dg_Produtos.CurrentRow.Index;// pega a linha selecionada
+            idAlterar = Convert.ToInt32(
+              dg_Produtos.Rows[linha].Cells["idproduto"].Value.ToString());
+            txt_AlteraNome.Text =
+                 dg_Produtos.Rows[linha].Cells["nome"].Value.ToString();
+            txt_AlteraQuantidade.Text =
+                dg_Produtos.Rows[linha].Cells["quantidade"].Value.ToString();
+            txt_AlteraPreco.Text =
+                dg_Produtos.Rows[linha].Cells["preco"].Value.ToString();
+            cb_AlteraCategoria.Text =
+                dg_Produtos.Rows[linha].Cells["categoria"].Value.ToString();
+            tabControl1.SelectedTab = tabAlterar;// muda aba
         }
     }
 }

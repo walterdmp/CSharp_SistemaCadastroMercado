@@ -100,6 +100,50 @@ namespace Projeto_Final
             {
                 conexao.Close();
             }
-        }// fim deletaBanda 
+        }
+
+        public bool insereCategoria(string categoria)
+        {
+            try
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("sp_insereCategoria", conexao);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("categoria", categoria);
+                cmd.ExecuteNonQuery();//executar no banco
+                return true;
+            }
+            catch (MySqlException erro)
+            {
+                mensagem = erro.Message;
+                return false;
+            }
+        }
+
+        public bool alteraProduto(Produto p, int idproduto)
+        {
+            MySqlCommand cmd = new MySqlCommand("sp_alteraProduto", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idprodut", idproduto);
+            cmd.Parameters.AddWithValue("nome", p.Nome);
+            cmd.Parameters.AddWithValue("fk_categoria", p.Categoria);
+            cmd.Parameters.AddWithValue("quantidade", p.Quantidade);
+            cmd.Parameters.AddWithValue("preco", p.Preco);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }
