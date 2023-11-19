@@ -44,7 +44,7 @@
             panel1.Controls.Add(btn_fechar);
             panel1.Location = new Point(-1, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(582, 46);
+            panel1.Size = new Size(582, 35);
             panel1.TabIndex = 0;
             // 
             // btn_fechar
@@ -75,9 +75,9 @@
             btn_AddCategoria.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btn_AddCategoria.Image = (Image)resources.GetObject("btn_AddCategoria.Image");
             btn_AddCategoria.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_AddCategoria.Location = new Point(222, 177);
+            btn_AddCategoria.Location = new Point(226, 177);
             btn_AddCategoria.Name = "btn_AddCategoria";
-            btn_AddCategoria.Size = new Size(127, 44);
+            btn_AddCategoria.Size = new Size(119, 44);
             btn_AddCategoria.TabIndex = 10;
             btn_AddCategoria.Text = "Cadastrar";
             btn_AddCategoria.TextAlign = ContentAlignment.MiddleRight;

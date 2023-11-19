@@ -21,7 +21,7 @@ namespace Projeto_Final
         private void btn_Login_Click_1(object sender, EventArgs e)
         {
             ConectaBanco conecta = new ConectaBanco();
-            if(conecta.verifica(txt_UserLogin.Text, txt_SenhaLogin.Text) == true)
+            if (conecta.verifica(txt_UserLogin.Text, txt_SenhaLogin.Text) == true)
             {
                 Sistema sistema = new Sistema();
                 this.Hide();
