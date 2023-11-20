@@ -144,7 +144,7 @@
             btn_ConfirmaAlteracao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btn_ConfirmaAlteracao.Image = (Image)resources.GetObject("btn_ConfirmaAlteracao.Image");
             btn_ConfirmaAlteracao.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_ConfirmaAlteracao.Location = new Point(296, 203);
+            btn_ConfirmaAlteracao.Location = new Point(296, 213);
             btn_ConfirmaAlteracao.Name = "btn_ConfirmaAlteracao";
             btn_ConfirmaAlteracao.Size = new Size(205, 44);
             btn_ConfirmaAlteracao.TabIndex = 18;
