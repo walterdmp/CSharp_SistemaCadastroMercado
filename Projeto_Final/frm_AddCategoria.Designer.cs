@@ -75,7 +75,7 @@
             btn_AddCategoria.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btn_AddCategoria.Image = (Image)resources.GetObject("btn_AddCategoria.Image");
             btn_AddCategoria.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_AddCategoria.Location = new Point(226, 177);
+            btn_AddCategoria.Location = new Point(234, 176);
             btn_AddCategoria.Name = "btn_AddCategoria";
             btn_AddCategoria.Size = new Size(119, 44);
             btn_AddCategoria.TabIndex = 10;

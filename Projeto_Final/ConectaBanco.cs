@@ -102,7 +102,7 @@ namespace Projeto_Final
             }
         }
 
-        public bool insereCategoria(string categoria)
+        public bool insereCategoria(string categoria, Sistema sistema)
         {
             try
             {
@@ -111,6 +111,9 @@ namespace Projeto_Final
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("categoria", categoria);
                 cmd.ExecuteNonQuery();//executar no banco
+
+                sistema.listaCBCategorias();
+
                 return true;
             }
             catch (MySqlException erro)
@@ -174,6 +177,26 @@ namespace Projeto_Final
                 conexao.Close();
             }
         }
-
+        public bool deletaCategoria(int idRemoveCategoria)
+        {
+            MySqlCommand cmd = new MySqlCommand("sp_removeCategoria", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idcateg", idRemoveCategoria);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

@@ -45,7 +45,7 @@
             btn_Login.ForeColor = SystemColors.WindowText;
             btn_Login.Image = (Image)resources.GetObject("btn_Login.Image");
             btn_Login.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Login.Location = new Point(273, 239);
+            btn_Login.Location = new Point(268, 239);
             btn_Login.Name = "btn_Login";
             btn_Login.Size = new Size(113, 44);
             btn_Login.TabIndex = 14;

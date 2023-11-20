@@ -32,7 +32,7 @@ namespace Projeto_Final
         private void btn_AddCategoria_Click(object sender, EventArgs e)
         {
             ConectaBanco con = new ConectaBanco();
-            bool retorno = con.insereCategoria(txt_AddCategoria.Text);
+            bool retorno = con.insereCategoria(txt_AddCategoria.Text, formSistema);
             if (retorno == false)
             {
                 MessageBox.Show(con.mensagem);

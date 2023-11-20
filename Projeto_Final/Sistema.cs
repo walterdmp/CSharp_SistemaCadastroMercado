@@ -34,13 +34,13 @@ namespace Projeto_Final
             txt_Nome.Clear();
             txt_Qtd.Clear();
             txt_Preco.Clear();
-            cb_Categoria.Text = "";
+            cb_Categoria.SelectedIndex = -1;
             txt_Nome.Focus();
 
             txt_AlteraNome.Clear();
             txt_AlteraQuantidade.Clear();
             txt_AlteraPreco.Clear();
-            cb_AlteraCategoria.Text = "";
+            cb_AlteraCategoria.SelectedIndex = -1;
         }
         private void btn_ConfirmaCadastro_Click(object sender, EventArgs e)
         {
@@ -136,14 +136,47 @@ namespace Projeto_Final
             idAlterar = Convert.ToInt32(
               dg_Produtos.Rows[linha].Cells["idproduto"].Value.ToString());
             txt_AlteraNome.Text =
-                 dg_Produtos.Rows[linha].Cells["nome"].Value.ToString();
+                 dg_Produtos.Rows[linha].Cells["Nome"].Value.ToString();
             txt_AlteraQuantidade.Text =
-                dg_Produtos.Rows[linha].Cells["quantidade"].Value.ToString();
+                dg_Produtos.Rows[linha].Cells["Quantidade"].Value.ToString();
             txt_AlteraPreco.Text =
-                dg_Produtos.Rows[linha].Cells["preco"].Value.ToString();
+                dg_Produtos.Rows[linha].Cells["Preço"].Value.ToString();
             cb_AlteraCategoria.Text =
-                dg_Produtos.Rows[linha].Cells["categoria"].Value.ToString();
+                dg_Produtos.Rows[linha].Cells["Categoria"].Value.ToString();
             tabControl1.SelectedTab = tabAlterar;// muda aba
+        }
+
+        private void btn_RemoveCategoria_Click(object sender, EventArgs e)
+        {
+            if (cb_Categoria.SelectedIndex != -1) // Verifica se algo está selecionado na ComboBox
+            {
+                int id = Convert.ToInt32(cb_Categoria.SelectedValue);
+
+                string categoriaSelecionada = cb_Categoria.Text;
+
+                DialogResult resp = MessageBox.Show("Tem certeza que deseja excluir?",
+                    "Remove Categoria", MessageBoxButtons.OKCancel);
+                if (resp == DialogResult.OK)
+                {
+                    ConectaBanco con = new ConectaBanco();
+                    bool retorno = con.deletaCategoria(id);
+
+                    if (retorno == true)
+                    {
+                        MessageBox.Show("Categoria excluido com sucesso!");
+                        listaCBCategorias();
+                        limpaCampos();
+                    }
+                    else
+                        MessageBox.Show(con.mensagem);
+                }
+                else
+                    MessageBox.Show("Exclusão cancelada");
+            }
+            else
+            {
+                MessageBox.Show("Nenhuma categoria selecionada");
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
             txt_Busca = new TextBox();
             lbl_Produto = new Label();
             tabCadastrar = new TabPage();
+            btn_RemoveCategoria = new Button();
             btn_AdicionaCategoria = new Button();
             btn_ConfirmaCadastro = new Button();
             cb_Categoria = new ComboBox();
@@ -300,6 +301,7 @@
             // tabCadastrar
             // 
             tabCadastrar.BackColor = Color.DarkGray;
+            tabCadastrar.Controls.Add(btn_RemoveCategoria);
             tabCadastrar.Controls.Add(btn_AdicionaCategoria);
             tabCadastrar.Controls.Add(btn_ConfirmaCadastro);
             tabCadastrar.Controls.Add(cb_Categoria);
@@ -319,6 +321,22 @@
             tabCadastrar.Size = new Size(803, 274);
             tabCadastrar.TabIndex = 0;
             tabCadastrar.Text = "Cadastrar";
+            // 
+            // btn_RemoveCategoria
+            // 
+            btn_RemoveCategoria.AutoSize = true;
+            btn_RemoveCategoria.BackColor = Color.DarkGray;
+            btn_RemoveCategoria.BackgroundImageLayout = ImageLayout.None;
+            btn_RemoveCategoria.FlatAppearance.BorderColor = Color.DarkGray;
+            btn_RemoveCategoria.FlatStyle = FlatStyle.Flat;
+            btn_RemoveCategoria.ForeColor = Color.DarkGray;
+            btn_RemoveCategoria.Image = (Image)resources.GetObject("btn_RemoveCategoria.Image");
+            btn_RemoveCategoria.Location = new Point(748, 70);
+            btn_RemoveCategoria.Name = "btn_RemoveCategoria";
+            btn_RemoveCategoria.Size = new Size(47, 40);
+            btn_RemoveCategoria.TabIndex = 11;
+            btn_RemoveCategoria.UseVisualStyleBackColor = false;
+            btn_RemoveCategoria.Click += btn_RemoveCategoria_Click;
             // 
             // btn_AdicionaCategoria
             // 
@@ -435,7 +453,7 @@
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabIndex = 0;
             // 
-            // Form1
+            // Sistema
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -443,7 +461,7 @@
             Controls.Add(panel1);
             Controls.Add(tabControl1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "Sistema";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema Mercado Nova Machado";
             Load += Form1_Load;
@@ -494,5 +512,6 @@
         private Label lbl_Nome;
         private TabControl tabControl1;
         private Button button1;
+        private Button btn_RemoveCategoria;
     }
 }
