@@ -18,31 +18,31 @@
   ### Tela de Login:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/walterdmp/CSharp_SistemaCadastroMercado/Assets/Tela_Login.PNG" alt="Login">
+  <img src="Assets/Tela_Login.png" alt="Tela Login">
 </figure>
 
 ### Tela de Cadastro:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/walterdmp/CSharp_SistemaCadastroMercado/Assets/Tela_Cadastro.PNG" alt="Login">
+  <img src="Assets/Tela_Cadastro.png" alt="Tela Cadastro">
 </figure>
 
 ### Tela de Adicionar Categoria:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/walterdmp/CSharp_SistemaCadastroMercado/Assets/Tela_Cadastro.PNG" alt="Login">
+  <img src="Assets/Tela_AddCategoria.png" alt="Tela Adicionar Categoria">
 </figure>
 
 ### Tela de Busca:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/walterdmp/CSharp_SistemaCadastroMercado/Assets/Tela_Busca.PNG" alt="Login">
+  <img src="Assets/Tela_Buscar.png" alt="Tela Busca">
 </figure>
 
 ### Tela de Alteração:
 
 <figure>
-  <img src="https://raw.githubusercontent.com/walterdmp/CSharp_SistemaCadastroMercado/Assets/Tela_Cadastro.PNG" alt="Login">
+  <img src="Assets/Tela_Alteracao.png" alt="Tela Alteração">
 </figure>
 
 
