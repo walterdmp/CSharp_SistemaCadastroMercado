@@ -25,7 +25,7 @@ namespace Projeto_Final
 
         private void btn_fechar_Click(object sender, EventArgs e)
         {
-            this.Close(); // Fecha o formulário atual (frm_AddCategoria)
+            this.Close(); // Fecha o formulário atual
             formSistema.Show(); // Mostra o formulário Sistema novamente
         }
 

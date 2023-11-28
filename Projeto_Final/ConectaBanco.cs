@@ -10,7 +10,7 @@ namespace Projeto_Final
 {
     class ConectaBanco
     {
-        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=;database=banco_siscadastro_mercado");
+        MySqlConnection conexao = new MySqlConnection("server=sql10.freemysqlhosting.net;user id=sql10665666;password=Rr8mmRiJVl;database=sql10665666");
         public string mensagem;
 
         public bool insereProduto(Produto novoProduto)
