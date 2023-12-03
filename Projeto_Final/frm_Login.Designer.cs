@@ -133,6 +133,7 @@
             Name = "frm_Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frm_Login";
+            Load += frm_Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

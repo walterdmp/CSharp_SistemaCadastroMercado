@@ -73,7 +73,7 @@ namespace Projeto_Final
             ConectaBanco con = new ConectaBanco();
             DataTable tabelaDados = new DataTable();
             tabelaDados = con.listaCategorias();
-            cb_Categoria.DataSource = tabelaDados;
+            cb_Categoria.DataSource = tabelaDados; 
             cb_Categoria.DisplayMember = "categoria";
             cb_Categoria.ValueMember = "idcategoria";
 
@@ -140,7 +140,7 @@ namespace Projeto_Final
             txt_AlteraQuantidade.Text =
                 dg_Produtos.Rows[linha].Cells["Quantidade"].Value.ToString();
             txt_AlteraPreco.Text =
-                dg_Produtos.Rows[linha].Cells["Preço"].Value.ToString();
+                dg_Produtos.Rows[linha].Cells["Preco"].Value.ToString();
             cb_AlteraCategoria.Text =
                 dg_Produtos.Rows[linha].Cells["Categoria"].Value.ToString();
             tabControl1.SelectedTab = tabAlterar;// muda aba

@@ -24,7 +24,7 @@ namespace Projeto_Final
                 cmd.Parameters.AddWithValue("quantidade", novoProduto.Quantidade);
                 cmd.Parameters.AddWithValue("preco", novoProduto.Preco);
                 cmd.Parameters.AddWithValue("fk_categoria", novoProduto.Categoria);
-                cmd.ExecuteNonQuery();//executar no banco
+                cmd.ExecuteNonQuery();//executar inserção de novo pedido
                 return true;
             }
             catch (MySqlException erro)

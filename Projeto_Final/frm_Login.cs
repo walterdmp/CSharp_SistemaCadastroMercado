@@ -38,5 +38,10 @@ namespace Projeto_Final
         {
             this.Close();
         }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
